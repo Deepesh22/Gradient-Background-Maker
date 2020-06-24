@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE3F24A371010068FDEF /* AppDelegate.swift */; };
 		B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE4124A371010068FDEF /* SceneDelegate.swift */; };
-		B16EEE4424A371010068FDEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE4324A371010068FDEF /* ContentView.swift */; };
+		B16EEE4424A371010068FDEF /* GradientColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE4324A371010068FDEF /* GradientColorsView.swift */; };
 		B16EEE4624A371030068FDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4524A371030068FDEF /* Assets.xcassets */; };
 		B16EEE4924A371030068FDEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4824A371030068FDEF /* Preview Assets.xcassets */; };
 		B16EEE4C24A371030068FDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4A24A371030068FDEF /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16EEE3F24A371010068FDEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16EEE4124A371010068FDEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B16EEE4324A371010068FDEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B16EEE4324A371010068FDEF /* GradientColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorsView.swift; sourceTree = "<group>"; };
 		B16EEE4524A371030068FDEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B16EEE4824A371030068FDEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B16EEE4B24A371030068FDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			children = (
 				B16EEE3F24A371010068FDEF /* AppDelegate.swift */,
 				B16EEE4124A371010068FDEF /* SceneDelegate.swift */,
-				B16EEE4324A371010068FDEF /* ContentView.swift */,
+				B16EEE4324A371010068FDEF /* GradientColorsView.swift */,
 				B16EEE5524A3D6D20068FDEF /* Helpers.swift */,
 				B16EEE5324A3C9100068FDEF /* gradients.json */,
 				B16EEE4524A371030068FDEF /* Assets.xcassets */,
@@ -155,7 +155,7 @@
 			files = (
 				B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */,
 				B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */,
-				B16EEE4424A371010068FDEF /* ContentView.swift in Sources */,
+				B16EEE4424A371010068FDEF /* GradientColorsView.swift in Sources */,
 				B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

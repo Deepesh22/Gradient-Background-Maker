@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 extension Color{
+    
     init(hex:String) {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -31,6 +32,7 @@ extension Color{
             opacity: 1
         )
     }
+    
 }
 
 func loadJson(filename fileName: String) -> [CustomGradient]? {

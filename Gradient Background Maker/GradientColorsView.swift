@@ -54,8 +54,6 @@ struct GradientView: View {
 struct GradientColorsView: View {
     
     let gradients: [CustomGradient] = loadJson(filename: "gradients") ?? []
-        
-    @State private var showRandom = true // just for shuffle, no significance of true and false
     
     var body: some View {
         
