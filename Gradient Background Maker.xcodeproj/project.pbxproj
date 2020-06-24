@@ -13,6 +13,8 @@
 		B16EEE4624A371030068FDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4524A371030068FDEF /* Assets.xcassets */; };
 		B16EEE4924A371030068FDEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4824A371030068FDEF /* Preview Assets.xcassets */; };
 		B16EEE4C24A371030068FDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4A24A371030068FDEF /* LaunchScreen.storyboard */; };
+		B16EEE5424A3C9100068FDEF /* gradients.json in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE5324A3C9100068FDEF /* gradients.json */; };
+		B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE5524A3D6D20068FDEF /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B16EEE4824A371030068FDEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B16EEE4B24A371030068FDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B16EEE4D24A371030068FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B16EEE5324A3C9100068FDEF /* gradients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gradients.json; sourceTree = "<group>"; };
+		B16EEE5524A3D6D20068FDEF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				B16EEE3F24A371010068FDEF /* AppDelegate.swift */,
 				B16EEE4124A371010068FDEF /* SceneDelegate.swift */,
 				B16EEE4324A371010068FDEF /* ContentView.swift */,
+				B16EEE5524A3D6D20068FDEF /* Helpers.swift */,
+				B16EEE5324A3C9100068FDEF /* gradients.json */,
 				B16EEE4524A371030068FDEF /* Assets.xcassets */,
 				B16EEE4A24A371030068FDEF /* LaunchScreen.storyboard */,
 				B16EEE4D24A371030068FDEF /* Info.plist */,
@@ -136,6 +142,7 @@
 				B16EEE4C24A371030068FDEF /* LaunchScreen.storyboard in Resources */,
 				B16EEE4924A371030068FDEF /* Preview Assets.xcassets in Resources */,
 				B16EEE4624A371030068FDEF /* Assets.xcassets in Resources */,
+				B16EEE5424A3C9100068FDEF /* gradients.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +156,7 @@
 				B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */,
 				B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */,
 				B16EEE4424A371010068FDEF /* ContentView.swift in Sources */,
+				B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
