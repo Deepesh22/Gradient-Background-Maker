@@ -33,24 +33,6 @@ struct GridCell: View{
     }
 }
 
-
-struct GradientView: View {
-    
-    let gradient: CustomGradient
-    
-    var body: some View{
-        LinearGradient(gradient: Gradient(
-                            colors: gradient.colors.map({
-                            Color.init(hex: $0)
-                        })),
-                        startPoint: .top,
-                        endPoint: .bottom)
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle(Text(gradient.name), displayMode: .inline)
-        
-    }
-}
-
 struct GradientColorsView: View {
     
     let gradients: [CustomGradient] = loadJson(filename: "gradients") ?? []
@@ -60,19 +42,23 @@ struct GradientColorsView: View {
         NavigationView{
             
             ScrollView{
-                ForEach(Array(stride(from: 0, to: self.gradients.count, by: 2)), id: \.self){ index in
-                    HStack{
-                        NavigationLink(destination:
-                            GradientView(gradient: self.gradients[index])
-                        ){
-                            GridCell(gradient: self.gradients[index], leading: true)
-                        }
-                        NavigationLink(destination:
-                            GradientView(gradient: self.gradients[index+1])
-                        ){
-                            GridCell(gradient: self.gradients[index+1], leading: false)
+                if self.gradients.count > 0{
+                    ForEach(Array(stride(from: 0, to: self.gradients.count, by: 2)), id: \.self){ index in
+                        HStack{
+                            NavigationLink(destination:
+                                GradientColorView(gradient: self.gradients[index])
+                            ){
+                                GridCell(gradient: self.gradients[index], leading: true)
+                            }
+                            NavigationLink(destination:
+                                GradientColorView(gradient: self.gradients[index+1])
+                            ){
+                                GridCell(gradient: self.gradients[index+1], leading: false)
+                            }
                         }
                     }
+                }else{
+                    Text("Oops! Something went wrong!")
                 }
             }
             
@@ -81,7 +67,7 @@ struct GradientColorsView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GradientColorsView_Previews: PreviewProvider {
     static var previews: some View {
         GradientColorsView()
     }

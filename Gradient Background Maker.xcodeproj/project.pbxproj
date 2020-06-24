@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B169AA7E24A3EE9600E90F94 /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */; };
 		B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE3F24A371010068FDEF /* AppDelegate.swift */; };
 		B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE4124A371010068FDEF /* SceneDelegate.swift */; };
 		B16EEE4424A371010068FDEF /* GradientColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE4324A371010068FDEF /* GradientColorsView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
 		B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16EEE3F24A371010068FDEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16EEE4124A371010068FDEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				B16EEE3F24A371010068FDEF /* AppDelegate.swift */,
 				B16EEE4124A371010068FDEF /* SceneDelegate.swift */,
 				B16EEE4324A371010068FDEF /* GradientColorsView.swift */,
+				B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */,
 				B16EEE5524A3D6D20068FDEF /* Helpers.swift */,
 				B16EEE5324A3C9100068FDEF /* gradients.json */,
 				B16EEE4524A371030068FDEF /* Assets.xcassets */,
@@ -97,6 +100,8 @@
 			dependencies = (
 			);
 			name = "Gradient Background Maker";
+			packageProductDependencies = (
+			);
 			productName = "Gradient Background Maker";
 			productReference = B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +130,8 @@
 				Base,
 			);
 			mainGroup = B16EEE3324A371000068FDEF;
+			packageReferences = (
+			);
 			productRefGroup = B16EEE3D24A371010068FDEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +162,7 @@
 			files = (
 				B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */,
 				B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */,
+				B169AA7E24A3EE9600E90F94 /* GradientColorView.swift in Sources */,
 				B16EEE4424A371010068FDEF /* GradientColorsView.swift in Sources */,
 				B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */,
 			);
@@ -294,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Gradient Background Maker/Preview Content\"";
+				DEVELOPMENT_TEAM = HNHUAH9TAG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Gradient Background Maker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Gradient Background Maker/Preview Content\"";
+				DEVELOPMENT_TEAM = HNHUAH9TAG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Gradient Background Maker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
