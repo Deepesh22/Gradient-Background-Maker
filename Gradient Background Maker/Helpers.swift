@@ -24,6 +24,13 @@ func loadJson(filename fileName: String) -> [CustomGradient]? {
 }
 
 
+func toHexString(r: Int, g: Int, b: Int) -> String {
+    let rgb:Int = (Int)(r)<<16 | (Int)(g)<<8 | (Int)(b)<<0
+    
+    return String(format:"#%06x", rgb)
+}
+
+
 extension Color{
     
     init(hex:String) {

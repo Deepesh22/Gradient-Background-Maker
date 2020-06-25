@@ -16,6 +16,7 @@
 		B16EEE4C24A371030068FDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4A24A371030068FDEF /* LaunchScreen.storyboard */; };
 		B16EEE5424A3C9100068FDEF /* gradients.json in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE5324A3C9100068FDEF /* gradients.json */; };
 		B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE5524A3D6D20068FDEF /* Helpers.swift */; };
+		B1CF447024A41489001F0865 /* CustomGradientMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B16EEE4D24A371030068FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16EEE5324A3C9100068FDEF /* gradients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gradients.json; sourceTree = "<group>"; };
 		B16EEE5524A3D6D20068FDEF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradientMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B16EEE4124A371010068FDEF /* SceneDelegate.swift */,
 				B16EEE4324A371010068FDEF /* GradientColorsView.swift */,
 				B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */,
+				B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */,
 				B16EEE5524A3D6D20068FDEF /* Helpers.swift */,
 				B16EEE5324A3C9100068FDEF /* gradients.json */,
 				B16EEE4524A371030068FDEF /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */,
+				B1CF447024A41489001F0865 /* CustomGradientMaker.swift in Sources */,
 				B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */,
 				B169AA7E24A3EE9600E90F94 /* GradientColorView.swift in Sources */,
 				B16EEE4424A371010068FDEF /* GradientColorsView.swift in Sources */,

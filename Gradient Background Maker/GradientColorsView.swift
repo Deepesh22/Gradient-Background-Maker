@@ -27,7 +27,7 @@ struct GridCell: View{
                                     })),
                                     startPoint: .top,
                                     endPoint: .bottom))
-                .frame(height: 200)
+                .frame(height: 300)
                 .padding(self.leading ? .leading : .trailing, 10)
         }
     }
@@ -61,8 +61,14 @@ struct GradientColorsView: View {
                     Text("Oops! Something went wrong!")
                 }
             }
-            
             .navigationBarTitle("Gradient Colors")
+            .navigationBarItems(trailing:
+                NavigationLink(destination: CustomGradientMaker()){
+                   Image(systemName: "slider.horizontal.3")
+                    .resizable()
+                    .padding()
+                    .scaleEffect(1.5)
+            })
         }
     }
 }

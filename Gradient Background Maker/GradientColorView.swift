@@ -17,8 +17,40 @@ struct CustomTextField: View{
         Text(text)
             .padding()
             .foregroundColor(.primary)
-            .background(colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2))
+            .background(colorScheme == .dark ? Color.white.opacity(0.5) : Color.black.opacity(0.2))
             .cornerRadius(40)
+    }
+}
+
+struct Options: View{
+    
+    @Binding var showOptions: Bool
+    @Binding var showCopiedlabel: Bool
+    
+    let gradient: CustomGradient
+    
+    var body: some View{
+        VStack(spacing: 10){
+            CustomTextField(text: "Copy HEX codes")
+                .onTapGesture {
+                    self.showOptions.toggle()
+                    let pasteboard = UIPasteboard.general
+                    pasteboard.strings = self.gradient.colors
+                    self.showCopiedlabel = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+                        self.showCopiedlabel = false
+                    }
+            }
+
+            CustomTextField(text: "Save/Share Gradient")
+                .onTapGesture {
+                    self.showOptions.toggle()
+                    DispatchQueue.main.async {
+                        share(gradientC: self.gradient)
+                    }
+            }
+        }
+        .font(.headline)
     }
 }
 
@@ -43,27 +75,7 @@ struct GradientColorView: View {
                 .animation(.default)
             
             if showOptions{
-                VStack(spacing: 10){
-                    CustomTextField(text: "Copy HEX codes")
-                        .onTapGesture {
-                            self.showOptions.toggle()
-                            let pasteboard = UIPasteboard.general
-                            pasteboard.strings = self.gradient.colors
-                            self.showCopiedlabel = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
-                                self.showCopiedlabel = false
-                            }
-                    }
-
-                    CustomTextField(text: "Save/Share Gradient")
-                        .onTapGesture {
-                            self.showOptions.toggle()
-                            DispatchQueue.main.async {
-                                share(gradientC: self.gradient)
-                            }
-                    }
-                }
-                .font(.headline)
+                Options(showOptions: $showOptions, showCopiedlabel: $showCopiedlabel, gradient: gradient)
             }
             
             CustomTextField(text: "Copied!!")
@@ -76,7 +88,10 @@ struct GradientColorView: View {
             self.showOptions.toggle()
         }){
             Image(systemName: "option")
-        }.buttonStyle(PlainButtonStyle())
+                .resizable()
+                .padding()
+                .scaleEffect(1.5)
+            }
         )
     }
 }
@@ -87,14 +102,14 @@ func share(gradientC: CustomGradient){
     
     let image = UIImage.gradientImageWithBounds(bounds: UIScreen.main.bounds, colors: colors)
         
-    let av = UIActivityViewController(activityItems: [gradientC.name, image], applicationActivities: nil)
+    let av = UIActivityViewController(activityItems: [image], applicationActivities: nil)
     UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true)
 }
 
 
 struct GradientColorView_Previews: PreviewProvider {
     static var previews: some View {
-        GradientColorView(gradient: CustomGradient(name: "myCustomGradient", colors: [ "000000", "FFFFFF"]))
+        GradientColorView(gradient: CustomGradient(name: "CustomGradient", colors: [ "000000", "FFFFFF"]))
     }
 }
 
