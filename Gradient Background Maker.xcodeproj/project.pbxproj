@@ -16,12 +16,13 @@
 		B16EEE4C24A371030068FDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE4A24A371030068FDEF /* LaunchScreen.storyboard */; };
 		B16EEE5424A3C9100068FDEF /* gradients.json in Resources */ = {isa = PBXBuildFile; fileRef = B16EEE5324A3C9100068FDEF /* gradients.json */; };
 		B16EEE5624A3D6D20068FDEF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EEE5524A3D6D20068FDEF /* Helpers.swift */; };
+		B1C263C924A91F9500BE7AC7 /* UserCustomGradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C263C824A91F9500BE7AC7 /* UserCustomGradients.swift */; };
 		B1CF447024A41489001F0865 /* CustomGradientMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
-		B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16EEE3C24A371010068FDEF /* Gradient Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B16EEE3F24A371010068FDEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B16EEE4124A371010068FDEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B16EEE4324A371010068FDEF /* GradientColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorsView.swift; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 		B16EEE4D24A371030068FDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B16EEE5324A3C9100068FDEF /* gradients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gradients.json; sourceTree = "<group>"; };
 		B16EEE5524A3D6D20068FDEF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		B1C263C824A91F9500BE7AC7 /* UserCustomGradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCustomGradients.swift; sourceTree = "<group>"; };
 		B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradientMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,7 @@
 		B16EEE3D24A371010068FDEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */,
+				B16EEE3C24A371010068FDEF /* Gradient Background.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +71,7 @@
 				B16EEE4324A371010068FDEF /* GradientColorsView.swift */,
 				B169AA7D24A3EE9600E90F94 /* GradientColorView.swift */,
 				B1CF446F24A41489001F0865 /* CustomGradientMaker.swift */,
+				B1C263C824A91F9500BE7AC7 /* UserCustomGradients.swift */,
 				B16EEE5524A3D6D20068FDEF /* Helpers.swift */,
 				B16EEE5324A3C9100068FDEF /* gradients.json */,
 				B16EEE4524A371030068FDEF /* Assets.xcassets */,
@@ -106,7 +109,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Gradient Background Maker";
-			productReference = B16EEE3C24A371010068FDEF /* Gradient Background Maker.app */;
+			productReference = B16EEE3C24A371010068FDEF /* Gradient Background.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B16EEE4024A371010068FDEF /* AppDelegate.swift in Sources */,
+				B1C263C924A91F9500BE7AC7 /* UserCustomGradients.swift in Sources */,
 				B1CF447024A41489001F0865 /* CustomGradientMaker.swift in Sources */,
 				B16EEE4224A371010068FDEF /* SceneDelegate.swift in Sources */,
 				B169AA7E24A3EE9600E90F94 /* GradientColorView.swift in Sources */,
@@ -314,9 +318,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "deepesh.Gradient-Background-Maker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Gradient Background";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,9 +338,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "deepesh.Gradient-Background-Maker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Gradient Background";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -26,6 +26,9 @@ struct Options: View{
     
     @Binding var showOptions: Bool
     @Binding var showCopiedlabel: Bool
+    let gradientNotFromPresets: Bool
+    
+    let userCustomGradientItems: UserCustomGradientsItems
     
     let gradient: CustomGradient
     
@@ -42,12 +45,22 @@ struct Options: View{
                     }
             }
 
-            CustomTextField(text: "Save/Share Gradient")
+            CustomTextField(text: "Share Gradient")
+                .onTapGesture {
+                    self.showOptions.toggle()
+//                    DispatchQueue.main.async {
+                        share(gradientC: self.gradient)
+//                    }
+            }
+            
+            if self.gradientNotFromPresets{
+                CustomTextField(text: "Save Gradient in App")
                 .onTapGesture {
                     self.showOptions.toggle()
                     DispatchQueue.main.async {
-                        share(gradientC: self.gradient)
+                        self.userCustomGradientItems.UserCustomGradients.append(self.gradient)
                     }
+                }
             }
         }
         .font(.headline)
@@ -59,6 +72,9 @@ struct Options: View{
 struct GradientColorView: View {
     
     let gradient: CustomGradient
+    let gradientNotFromPresets: Bool
+    
+    let userCustomGradientItems: UserCustomGradientsItems
     
     @State var showOptions = false
     @State var showCopiedlabel = false
@@ -75,11 +91,11 @@ struct GradientColorView: View {
                 .animation(.default)
             
             if showOptions{
-                Options(showOptions: $showOptions, showCopiedlabel: $showCopiedlabel, gradient: gradient)
+                Options(showOptions: $showOptions, showCopiedlabel: $showCopiedlabel, gradientNotFromPresets: gradientNotFromPresets, userCustomGradientItems: self.userCustomGradientItems, gradient: gradient)
             }
             
             CustomTextField(text: "Copied!!")
-                .offset(y: self.showCopiedlabel ? UIScreen.main.bounds.height / 2 - 200 : UIScreen.main.bounds.height / 2 + 50)
+                .offset(y: self.showCopiedlabel ? -UIScreen.main.bounds.height / 2 + 250 : -UIScreen.main.bounds.height / 2)
                 .animation(.spring())
         }
         .edgesIgnoringSafeArea(.all)
@@ -109,7 +125,7 @@ func share(gradientC: CustomGradient){
 
 struct GradientColorView_Previews: PreviewProvider {
     static var previews: some View {
-        GradientColorView(gradient: CustomGradient(name: "CustomGradient", colors: [ "000000", "FFFFFF"]))
+        GradientColorView(gradient: CustomGradient(name: "CustomGradient", colors: [ "000000", "FFFFFF"]), gradientNotFromPresets: true, userCustomGradientItems: UserCustomGradientsItems())
     }
 }
 

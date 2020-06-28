@@ -45,6 +45,8 @@ struct CustomGradientMaker: View {
     @State private var blue2 = 0.0
     @State private var green2 = 0.0
     
+    let userCustomGradients: UserCustomGradientsItems
+    
     var body: some View {
         ZStack{
             LinearGradient(gradient: Gradient(colors: [
@@ -74,7 +76,7 @@ struct CustomGradientMaker: View {
                     GradientColorView(gradient: CustomGradient(name: "myCustomGradient",
                                                                colors: [ toHexString(r: Int(red), g: Int(green), b: Int(blue)),
                                                                          toHexString(r: Int(red2), g: Int(green2), b: Int(blue2))]
-                    ))
+                    ), gradientNotFromPresets: true, userCustomGradientItems: self.userCustomGradients)
                 ){
                     Image(systemName: "viewfinder")
                         .resizable()
@@ -88,6 +90,6 @@ struct CustomGradientMaker: View {
 
 struct CustomGradientMaker_Previews: PreviewProvider {
     static var previews: some View {
-        CustomGradientMaker()
+        CustomGradientMaker(userCustomGradients: UserCustomGradientsItems())
     }
 }
