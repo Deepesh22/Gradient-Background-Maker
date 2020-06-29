@@ -59,7 +59,7 @@ struct GradientColorsView: View {
                             Text("Oops! Something went wrong!")
                         }
                     }
-                    .navigationBarTitle("Gradient Colors 1")
+                    .navigationBarTitle("Gradient Colors Presets")
                 }
             .tabItem {
                 Image(systemName: "1.square.fill")
@@ -68,7 +68,7 @@ struct GradientColorsView: View {
                 
                 NavigationView{
                     ScrollView{
-                        if self.userCustomGradients.UserCustomGradients.count > 1{
+                        if self.userCustomGradients.UserCustomGradients.count > 0{
                             ForEach(self.userCustomGradients.UserCustomGradients, id: \.self){ gradient in
                                 NavigationLink(destination:
                                 
@@ -80,9 +80,10 @@ struct GradientColorsView: View {
                         }else{
                             Text("Create your own by tapping on top right corner...")
                                 .font(.title)
+                            .padding()
                         }
                     }
-                    .navigationBarTitle("Gradient Colors 2")
+                    .navigationBarTitle("Your Gradient Colors")
                     .navigationBarItems(trailing:
                         NavigationLink(destination: CustomGradientMaker(userCustomGradients: self.userCustomGradients)){
                            Image(systemName: "slider.horizontal.3")

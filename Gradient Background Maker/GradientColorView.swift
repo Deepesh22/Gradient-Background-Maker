@@ -47,19 +47,19 @@ struct Options: View{
 
             CustomTextField(text: "Share Gradient")
                 .onTapGesture {
-                    self.showOptions.toggle()
-//                    DispatchQueue.main.async {
-                        share(gradientC: self.gradient)
-//                    }
+                    withAnimation(){
+                        self.showOptions.toggle()
+                    }
+                    share(gradientC: self.gradient)
             }
             
             if self.gradientNotFromPresets{
                 CustomTextField(text: "Save Gradient in App")
                 .onTapGesture {
-                    self.showOptions.toggle()
-                    DispatchQueue.main.async {
-                        self.userCustomGradientItems.UserCustomGradients.append(self.gradient)
+                    withAnimation(){
+                        self.showOptions.toggle()
                     }
+                    self.userCustomGradientItems.UserCustomGradients.append(self.gradient)
                 }
             }
         }
@@ -89,6 +89,11 @@ struct GradientColorView: View {
                             endPoint: .bottom)
                 .opacity(showOptions ? 0.7 : 1)
                 .animation(.default)
+                .onTapGesture {
+                    withAnimation(){
+                        self.showOptions = false
+                    }
+            }
             
             if showOptions{
                 Options(showOptions: $showOptions, showCopiedlabel: $showCopiedlabel, gradientNotFromPresets: gradientNotFromPresets, userCustomGradientItems: self.userCustomGradientItems, gradient: gradient)
