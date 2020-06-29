@@ -34,6 +34,10 @@ struct Options: View{
     
     var body: some View{
         VStack(spacing: 10){
+            
+            Text(gradient.name)
+            Text(gradient.colors.joined(separator: " "))
+            
             CustomTextField(text: "Copy HEX codes")
                 .onTapGesture {
                     self.showOptions.toggle()
@@ -106,7 +110,7 @@ struct GradientColorView: View {
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle(Text(gradient.name), displayMode: .inline)
         .navigationBarItems(trailing: Button(action: {
-            self.showOptions.toggle()
+            withAnimation(){self.showOptions.toggle()}
         }){
             Image(systemName: "option")
                 .resizable()

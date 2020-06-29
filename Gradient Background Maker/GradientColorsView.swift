@@ -75,6 +75,7 @@ struct GradientColorsView: View {
                                     GradientColorView(gradient: gradient, gradientNotFromPresets: false, userCustomGradientItems: self.userCustomGradients)
                                 ){
                                     GridCell(gradient: gradient, leading: true)
+                                        .padding(.trailing, 10)
                                 }
                             }
                         }else{
