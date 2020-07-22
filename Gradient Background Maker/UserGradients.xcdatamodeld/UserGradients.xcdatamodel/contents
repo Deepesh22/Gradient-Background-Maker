@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="20A4300b" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CustomColor" representedClassName="CustomColor" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <relationship name="gradient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCustomGradient" inverseName="color" inverseEntity="UserCustomGradient"/>
+    </entity>
+    <entity name="UserCustomGradient" representedClassName="UserCustomGradient" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="color" optional="YES" toMany="YES" minCount="2" deletionRule="Nullify" destinationEntity="CustomColor" inverseName="gradient" inverseEntity="CustomColor"/>
+    </entity>
+    <elements>
+        <element name="UserCustomGradient" positionX="-202.31494140625" positionY="-121.5633850097656" width="157.093994140625" height="73"/>
+        <element name="CustomColor" positionX="300.33544921875" positionY="-110.7030334472656" width="128" height="73"/>
+    </elements>
+</model>

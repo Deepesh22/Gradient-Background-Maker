@@ -112,7 +112,7 @@ struct GradientColorView: View {
         .navigationBarItems(trailing: Button(action: {
             withAnimation(){self.showOptions.toggle()}
         }){
-            Image(systemName: "option")
+            Image(systemName: "square.and.arrow.up.fill")
                 .resizable()
                 .padding()
                 .scaleEffect(1.5)
@@ -134,7 +134,7 @@ func share(gradientC: CustomGradient){
 
 struct GradientColorView_Previews: PreviewProvider {
     static var previews: some View {
-        GradientColorView(gradient: CustomGradient(name: "CustomGradient", colors: [ "000000", "FFFFFF"]), gradientNotFromPresets: true, userCustomGradientItems: UserCustomGradientsItems())
+        GradientColorView(gradient: CustomGradient(name: "Custom Gradient", colors: [ "000000", "FFFFFF"]), gradientNotFromPresets: true, userCustomGradientItems: UserCustomGradientsItems())
     }
 }
 

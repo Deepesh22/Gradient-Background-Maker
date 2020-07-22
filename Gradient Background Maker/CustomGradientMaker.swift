@@ -73,7 +73,7 @@ struct CustomGradientMaker: View {
                 
             .navigationBarItems(trailing:
                 NavigationLink(destination:
-                    GradientColorView(gradient: CustomGradient(name: "myCustomGradient",
+                    GradientColorView(gradient: CustomGradient(name: "Custom Gradient",
                                                                colors: [ toHexString(r: Int(red), g: Int(green), b: Int(blue)),
                                                                          toHexString(r: Int(red2), g: Int(green2), b: Int(blue2))]
                     ), gradientNotFromPresets: true, userCustomGradientItems: self.userCustomGradients)

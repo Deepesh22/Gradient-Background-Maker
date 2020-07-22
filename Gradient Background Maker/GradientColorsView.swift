@@ -62,7 +62,7 @@ struct GradientColorsView: View {
                     .navigationBarTitle("Gradient Colors Presets")
                 }
             .tabItem {
-                Image(systemName: "1.square.fill")
+                Image(systemName: "wand.and.stars")
                 Text("Presets")
             }
                 
@@ -87,14 +87,14 @@ struct GradientColorsView: View {
                     .navigationBarTitle("Your Gradient Colors")
                     .navigationBarItems(trailing:
                         NavigationLink(destination: CustomGradientMaker(userCustomGradients: self.userCustomGradients)){
-                           Image(systemName: "slider.horizontal.3")
+                           Image(systemName: "plus.circle.fill")
                             .resizable()
                             .padding()
                             .scaleEffect(1.5)
                     })
                 }
             .tabItem {
-                Image(systemName: "2.square.fill")
+                Image(systemName: "slider.horizontal.3")
                 Text("Customs")
             }
         }
